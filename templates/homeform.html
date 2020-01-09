@@ -1,0 +1,82 @@
+{% load static %}
+<html lang="en">
+<head>
+
+    <title>Product Homepage</title>
+     <link rel="stylesheet" href="#">
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<style>
+    .jumbotron {
+        background-color:whitesmoke;
+        border : 20px solid firebrick;
+        border-radius: 20px;
+        box-shadow: 10px 10px 10px black,20px 20px 10px greenyellow;
+    }
+    body{
+            background-color: lightgoldenrodyellow;
+    }
+    h1{
+        font-size: 120px;
+        text-shadow: 3px 3px red,7px 7px 7px blue;
+    }
+    .btn{
+        border-radius: 10px;
+        box-shadow: 4px 4px 4px mediumpurple;
+        text-shadow: 1px 1px 1px black;
+        background-color: lightgreen;
+
+    }
+</style>
+<body>
+<center><h2>Welcome to Page</h2></center>
+
+<div class="container">
+    <div class="row">
+        <div class = 'offset-md-5 col-md-5'>
+            <h5>Click on the link below..</h5>
+        </div>
+        <div class="col-md-12">
+         <div class="jumbotron">
+             <center>
+            <a href = "/create/"class= "btn bq-success text-black ">create</a>
+              <a href = "/update/"class= "btn bq-success text-black ">update</a>
+                 <a href = "/retrive/"class= "btn bq-success text-black ">retrive</a>
+                      <a href = "/delete/"class= "btn bq-success text-black ">delete</a>
+                                </center><br>
+{#                <label id ='pid'>Enter product id </label>#}
+{#                <input type="number" name="eid">#}
+{#                {{ hform.product_id  }}<br>#}
+{#                <label>Enter product name </label>#}
+{#                <input type="text" name="ename">#}
+{#                {{ hform.product_name  }}<br>#}
+{#                <label>Enter product cost </label>#}
+{#                <input type="number" name="ecost">#}
+{#                {{ hform.product_cost  }}<br>#}
+{#                <label>Enter product color </label>#}
+{#                <input type="text" name="ecolor">#}
+{#                {{ hform.product_color  }}<br>#}
+{#                <label>Enter cust name </label>#}
+{#                <input type="name" name="custname">#}
+{#                {{ hform.cust_name }}<br>#}
+{#                <label>Enter cust mobile </label>#}
+{#                <input type="number" name="custmobile">#}
+{#                {{ hform.cust_mobile }}<br>#}
+                <center>
+                    <a href="/login">bact to login?</a>
+                </center>
+            </form>
+        </div >
+
+    </div>
+</div>
+
+</div>
+</body>
+</html>

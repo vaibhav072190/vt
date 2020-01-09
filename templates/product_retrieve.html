@@ -1,0 +1,128 @@
+<html lang="en">
+<head>
+
+    <title>Product Retrive Page</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<style>
+    label {
+        margin-top: 20px;
+        width: 120px;
+    }
+    th td{
+        padding: 10px 20px 10px 20px;
+        text-align: center;
+    }
+    no_product{
+        color: red;
+        border: 2px red solid;
+        height: 400px;
+        padding-top: 150px;
+        font-size: 50px;
+        margin: 10px 300px 10px;
+        text-align: center;
+        background-image: radial-gradient(blue,yellow,green,deeppink);
+        border-radius: 20px 100px 20px 100px;
+    }
+    body{
+            background-color: oldlace;
+    }
+    divid{
+        margin-top: 20px;
+        font-size: 30px;
+    }
+    a{
+        color: blue;
+    }
+    h2{
+        text-shadow: 2px 2px red;
+        font-size: 70px;
+    }
+    tbody:nth-of-type(even){
+        background-color: orchid;
+    }
+    tbody:nth-of-type(odd){
+        background-color: red;
+    }
+    th td{
+        color: white;
+    }
+
+</style>
+<body>
+{% if cdata %}
+<center><h2>Product details</h2>
+<table border="2px">
+    <thead>
+    <tr>
+        <th>Product_id</th>
+        <th>Product_name</th>
+        <th>Product_cost</th>
+        <th>Product_color</th>
+        <th>cust_name</th>
+        <th>cust_mobile</th>
+    </tr>
+    </thead>
+    {% for i in cdata %}
+        <tbody>
+        <tr>
+            <td>{{  i.product_id }}</td>
+            <td>{{  i.product_name }}</td>
+            <td>{{  i.product_cost }}</td>
+            <td>{{  i.product_color }}</td>
+            <td>{{  i.cust_mobile }}</td>
+            <td>{{  i.cust_name }}</td>
+        </tr>
+        </tbody>
+    {% endfor %}
+</table>
+    </center>
+{% else %}
+<h3 id ="no_product">Products are not available</h3>
+{% endif %}
+<center> <div id = "divid"><a href="/homeview">Go to home</a></div> </center>
+<center><a href="/update">update</a>
+</center>
+
+{% comment %}<div class="container">
+    <div class="row">
+        <div class = 'offset-md-4 col-md-4'>
+            <h5>Welcome to retrive page</h5>
+        </div>
+        <div class="col-md-6">
+            <form method="Post">
+                <h2>Product details</h2>
+                {% csrf_token%}
+                <label id ='pid'>Enter product id </label>
+                {{ hform.product_id  }}<br>
+                <input type="number" name="eid"><br>
+                <label>Enter product name </label>
+                {{ hform.product_name  }}<br>
+                <label>Enter product cost </label>
+                {{ hform.product_cost  }}<br>
+                <label>Enter product color </label>
+                {{ hform.product_color  }}<br>
+                <label>Enter cust name </label>
+                {{ hform.cust_name }}<br>
+                <label>Enter cust mobile </label>
+                {{ hform.cust_mobile }}<br>
+                <center>
+                    <input type="submit" value="Retrive data" class="btn btn-success">
+                </center>
+            </form>
+        </div >
+        <div class="col-md-4" id = "home_id">
+            <a href="#">Go to home</a>
+        </div>
+    </div>
+</div>{% endcomment %}
+
+
+</body>
+</html>

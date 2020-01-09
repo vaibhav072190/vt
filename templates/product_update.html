@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title>Update your details here..</title>
+   <link rel="stylesheet" href="#">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<style>
+    .jumbotron {
+        background-color:blanchedalmond;
+        border : 20px solid firebrick;
+        border-radius: 20px;
+        box-shadow: 10px 10px 10px black,20px 20px 10px greenyellow;
+    }
+    body{
+            background-color: lightgoldenrodyellow;
+    }
+    h4{
+        font-size: 30px;
+        text-shadow: 3px 3px red, 5px 5px 5px blue;
+    }
+    .btn{
+        border-radius: 10px;
+        box-shadow: 4px 4px 4px mediumpurple;
+        text-shadow: 1px 1px 1px  black;
+        background-color: green;
+        color: black;
+
+    }
+</style>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="offset-md-4 col-md-4">
+        <form method="post">
+            <h4 class="text-center  text-black">Please update your details..</h4>
+            {% csrf_token %}
+            {{ uform }}<br>
+            <center>
+                    <input type="submit" value="Update" class="btn btn-success">
+                    <input type="reset" value="Clear" class="btn btn-danger"><br><br>
+                    <a href="/homeview">Back?</a>
+                </center>
+        </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
